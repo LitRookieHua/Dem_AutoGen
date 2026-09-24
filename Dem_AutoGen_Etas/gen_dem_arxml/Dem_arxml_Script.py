@@ -1,6 +1,6 @@
 from Merge_ExcelSheets import merge_excel_sheets
 from Parse_excel_list import parse_dem_excel
-from Delete_DemConfigSet import remove_demconfigset_subcontainers
+from Clear_DemConfigSet import clear_demconfigset_subcontainers
 from Create_DemEventParameter import insert_dem_event_to_arxml
 from Create_DemDTCs import insert_dem_dtc_to_arxml
 from Create_DemDTCAttributes import insert_dem_dtc_attributes_to_arxml
@@ -51,7 +51,7 @@ if __name__ == "__main__":
     if not os.path.exists(arxml_file_path):
         print(f"错误: 文件 '{arxml_file_path}' 不存在")
     else:
-        remove_demconfigset_subcontainers(arxml_file_path)
+        clear_demconfigset_subcontainers(arxml_file_path)
 
     # 执行插入
     insert_dem_event_to_arxml(

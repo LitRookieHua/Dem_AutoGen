@@ -50,7 +50,7 @@ def preprocess_xml_tags(xml_str: str) -> str:
     # 1. 将紧凑的标签分割（如"><"改为">\n<"）
     xml_str = re.sub(r'(?<=>)(?=<)', '\n', xml_str)
     # 2. 处理自闭合标签（如<SUB-CONTAINERS/> → <SUB-CONTAINERS>\n</SUB-CONTAINERS>）
-    xml_str = re.sub(r'<(\w+:\w+)/>', r'<\1>\n</\1>', xml_str)
+    xml_str = re.sub(r'<([A-Za-z_][\w.-]*:[A-Za-z_][\w.-]*)([^>]*)/>', r'<\1\2>\n</\1>', xml_str)
     return xml_str
 
 
