@@ -1,5 +1,4 @@
-# v2xeu: 只校验 DTC 表 + 生成 FiM 代码
-# 跳过 Dem 生成 (license/DaVinci 流程, 步骤 2-8)
+# v2xeu: 校验 DTC 表 + Dem 生成 + FiM 代码
 check_dtc_table: ON
-gen_dem_table: OFF
+gen_dem_table: ON
 gen_fim_code: ON
